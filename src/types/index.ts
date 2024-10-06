@@ -1,5 +1,6 @@
-import type { Colors } from "./styles";
+import type { Colors, Sizes } from "./styles";
 
 export {
-    Colors
+    Colors,
+    Sizes
 }
