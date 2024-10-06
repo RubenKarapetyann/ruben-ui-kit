@@ -1,0 +1,11 @@
+@mixin paint($color) {
+    color: $color;
+    background-color: $color;
+    border-color: $color;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
