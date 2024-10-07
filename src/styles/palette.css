@@ -1,10 +1,35 @@
 :root {
+    /* primary */
     --primary: #007bff;
+    --primary-strong: #0076f4;
+    --primary-stronger: #0072ec;
+
+    /* secondary */
     --secondary: #6c757d;
+    --secondary-strong: #666e76;
+    --secondary-stronger: #565d63;
+
+    /* success */
     --success: #28a745;
+    --success-strong: #219b3e;
+    --success-stronger: #20953b;
+
+    /* danger */
     --danger: #dc3545;
+    --danger-strong: #d62d3e;
+    --danger-stronger: #d31c2e;
+
+    /* warning */
     --warning: #ffc107;
+    --warning-strong: #f5b800;
+    --warning-stronger: #ebb000;
+
+    /* info */
     --info: #17a2b8;
+    --info-strong: #0b9ab0;
+    --info-stronger: #0991a5;
+
+    /* defaults */
     --white: #fff;
     --black: #000;
 }

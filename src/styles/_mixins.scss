@@ -4,6 +4,18 @@
     border-color: $color;
 }
 
+@mixin paint-button($color, $hover, $active) {
+    @include paint($color);
+
+    &:hover {
+        @include paint($hover);
+    }
+
+    &:active {
+        @include paint($active);
+    }
+}
+
 @mixin flex {
     display: flex;
     justify-content: center;
