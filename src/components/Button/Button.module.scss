@@ -1,0 +1,119 @@
+@use "../../styles/mixins.scss";
+
+.button {
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    @include mixins.flex();
+    gap: 5px;
+}
+
+// sizes
+.sm-size {
+    font-size: 12px;
+}
+
+.md-size {
+    font-size: 16px;
+}
+
+.lg-size {
+    font-size: 18px;
+}
+
+
+// colors
+.primary-color {
+    @include mixins.paint-button(
+        var(--primary),
+        var(--primary-strong),
+        var(--primary-stronger)
+    );
+}
+
+.secondary-color {
+    @include mixins.paint-button(
+        var(--secondary),
+        var(--secondary-strong),
+        var(--secondary-stronger)
+    );
+}
+
+.success-color {
+    @include mixins.paint-button(
+        var(--success),
+        var(--success-strong),
+        var(--success-stronger)
+    );
+}
+
+.danger-color {
+    @include mixins.paint-button(
+        var(--danger),
+        var(--danger-strong),
+        var(--danger-stronger)
+    );
+}
+
+.info-color {
+    @include mixins.paint-button(
+        var(--info),
+        var(--info-strong),
+        var(--info-stronger)
+    );
+}
+
+.warning-color {
+    @include mixins.paint-button(
+        var(--warning),
+        var(--warning-strong),
+        var(--warning-stronger)
+    );
+}
+
+
+// types
+.primary-type {
+    border: none;
+    color: var(--white);
+
+    &:hover {
+        color: var(--white);
+    }
+}
+
+button.secondary-type {
+    border: none;
+    background-color: var(--white);
+
+    &:hover {
+        background-color: var(--white);
+    }
+}
+
+button.outlined-type {
+    border: 0.5px solid;
+    background-color: var(--white);
+
+    &:hover {
+        color: var(--white);
+    }
+}
+
+
+// mixed
+.warning-color.primary-type {
+    color: var(--black);
+    
+    &:hover {
+        color: var(--black);
+    }
+}
+
+.warning-color.outlined-type:hover {
+    color: var(--black);
+}
