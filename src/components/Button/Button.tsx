@@ -8,7 +8,8 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>(({
     color = "primary",
     leftIcon,
     rightIcon,
-    children
+    children,
+    ...rest
 }: IButtonProps, ref) => (
     <button
         ref={ref}
@@ -18,6 +19,7 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>(({
             styles[color + "-color"],
             styles[type + "-type"],
         ].join(" ")}
+        {...rest}
     >
         {leftIcon && <span>{leftIcon}</span>}
         {children}
