@@ -22,7 +22,10 @@ export default defineConfig({
   },
   plugins: [react(),
     dst({
-      insertTypesEntry: true
+      insertTypesEntry: true,
+      include: ["src"],
+      rollupTypes: true,
+      tsconfigPath: "./tsconfig.app.json"
     })
   ]
 })
