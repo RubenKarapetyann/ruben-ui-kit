@@ -1,1 +1,1 @@
-export { Button, Input, Textarea } from "./components";
+export { Button, Input, Textarea, CheckBox } from "./components";
