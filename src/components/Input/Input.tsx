@@ -1,6 +1,6 @@
 import { forwardRef } from "react"
 import { IInputProps } from "./types"
-import styles from "./Input.module.scss"
+import TextField from "../TextField/TextField"
 
 const Input = forwardRef<
     HTMLInputElement, IInputProps
@@ -11,24 +11,12 @@ const Input = forwardRef<
     inputSize = "md",
     ...rest
 }: IInputProps, ref) => (
-    <>
-        <div className={styles.container}>
-            {leftIcon && <span className={[styles.leftIconContainer, error && styles.iconError].join(" ")}>{leftIcon}</span>}
-            <input
-                ref={ref}
-                className={[
-                    styles.input,
-                    styles["input-" + inputSize],
-                    error && styles.error,
-                    leftIcon && styles.leftIconInput,
-                    rightIcon && styles.rightIconInput
-                ].join(" ")}
-                {...rest}
-            />
-            {rightIcon && <span className={[styles.rightIconContainer, error && styles.iconError].join(" ")}>{rightIcon}</span>}
-        </div>
-        {error && <span className={styles.errorMessage}>{error}</span>}
-    </>
+    <TextField
+        error={error}
+        leftIcon={leftIcon}
+        rightIcon={rightIcon}
+        inputSize={inputSize}
+    ><input ref={ref} {...rest} /></TextField>
 ))
 
 export default Input
