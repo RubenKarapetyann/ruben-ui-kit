@@ -1,0 +1,55 @@
+@use "../../styles/mixins";
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    @include mixins.flex();
+}
+
+.container {
+    background-color: var(--white);
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+    padding: 20px;
+    position: fixed;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    z-index: 2;
+}
+
+.title {
+    height: auto;
+    @include mixins.flex();
+    justify-content: start;
+    border-bottom: 2px var(--black) solid;
+    padding-bottom: 10px;
+}
+
+.footer{
+    border-top: 2px var(--black) solid;
+    padding-top: 10px;
+}
+
+.content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.button {
+    min-width: 30px;
+    min-height: 30px;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    background: none;
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--black);
+}
