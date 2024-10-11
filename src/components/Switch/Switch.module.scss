@@ -1,0 +1,71 @@
+.container {
+    border-radius: 10rem;
+    box-sizing: border-box;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.circle {
+    height: 100%;
+    aspect-ratio: 1;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.active {
+    background-color: var(--primary);
+    justify-content: flex-end;
+
+    .circle {
+        animation: active 0.3s;
+    }
+
+    @keyframes active {
+        0% {
+            transform: translateX(-180%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+.inert {
+    background-color: var(--secondary);
+    justify-content: flex-start;
+
+    .circle {
+        animation: deactive 0.3s;
+    }
+
+    @keyframes deactive {
+        0% {
+            transform: translateX(180%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+.switch-sm {
+    width: 40px;
+    height: 17px;
+}
+
+.switch-md {
+    width: 50px;
+    height: 20px;
+}
+
+.switch-lg {
+    width: 60px;
+    height: 25px;
+}
+
+.error {
+    background-color: var(--danger);
+}

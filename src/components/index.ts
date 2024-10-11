@@ -4,11 +4,13 @@ import Input from "./Input/Input";
 import Textarea from "./Textarea/Textarea";
 import CheckBox from "./CheckBox/CheckBox";
 import Modal from "./Modal/Modal";
+import Switch from "./Switch/Switch";
 
 export {
     Button,
     Input,
     Textarea,
     CheckBox,
-    Modal
+    Modal,
+    Switch
 }
