@@ -1,0 +1,39 @@
+@use "../../styles/mixins";
+
+.table {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header, .row {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.header {
+    font-size: 20px;
+    font-weight: bold;
+    border-top: 1px solid var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+}
+
+.row {
+    border-bottom: 0.3px solid var(--secondary);
+    font-size: 18px;
+}
+
+.headerItem, .item {
+    width: fit-content;
+    padding: 10px;
+    width: 100%;
+}
+
+.footer {
+    @include mixins.flex();
+    padding: 5px;
+}

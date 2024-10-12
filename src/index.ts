@@ -9,5 +9,6 @@ export {
     Stepper,
     Loader,
     Tabs,
-    Pagination
+    Pagination,
+    Table
 } from "./components";
