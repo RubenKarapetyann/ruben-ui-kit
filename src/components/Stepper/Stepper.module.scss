@@ -1,0 +1,32 @@
+@use "../../styles/mixins";
+
+.container {
+    @include mixins.flex();
+    gap: 50px;
+    width: fit-content;
+    color: var(--white);
+}
+
+.step {
+    min-width: 30px;
+    min-height: 30px;
+    padding: 5px;
+    width: fit-content;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    @include mixins.flex();
+    cursor: pointer;
+}
+
+
+.progress {
+    background-color: var(--secondary);
+}
+
+.success {
+    background-color: var(--success);
+}
+
+.reject {
+    background-color: var(--danger);
+}

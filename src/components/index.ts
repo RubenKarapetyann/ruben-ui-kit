@@ -6,6 +6,7 @@ import CheckBox from "./CheckBox/CheckBox";
 import Modal from "./Modal/Modal";
 import Switch from "./Switch/Switch";
 import Popover from "./Popover/Popover";
+import Stepper from "./Stepper/Stepper";
 
 export {
     Button,
@@ -14,5 +15,6 @@ export {
     CheckBox,
     Modal,
     Switch,
-    Popover
+    Popover,
+    Stepper
 }

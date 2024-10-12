@@ -1,1 +1,1 @@
-export { Button, Input, Textarea, CheckBox, Modal, Switch, Popover } from "./components";
+export { Button, Input, Textarea, CheckBox, Modal, Switch, Popover, Stepper } from "./components";
