@@ -7,6 +7,7 @@ import Modal from "./Modal/Modal";
 import Switch from "./Switch/Switch";
 import Popover from "./Popover/Popover";
 import Stepper from "./Stepper/Stepper";
+import Loader from "./Loader/Loader";
 
 export {
     Button,
@@ -16,5 +17,6 @@ export {
     Modal,
     Switch,
     Popover,
-    Stepper
+    Stepper,
+    Loader
 }
