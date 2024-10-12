@@ -22,7 +22,7 @@ export const Primary: Story = {
     name: "primary",
     args: {
         children: "Click me",
-        type: "primary"
+        variant: "primary"
     }
 }
 
@@ -30,7 +30,7 @@ export const Secondary: Story = {
     name: "secondary",
     args: {
         children: "Click me",
-        type: "secondary"
+        variant: "secondary"
     }
 }
 
@@ -38,7 +38,7 @@ export const Outlined: Story = {
     name: "outlined",
     args: {
         children: "Click me",
-        type: "outlined"
+        variant: "outlined"
     }
 }
 

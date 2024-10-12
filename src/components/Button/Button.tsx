@@ -4,7 +4,7 @@ import { IButtonProps } from "./types"
 
 const Button = forwardRef<HTMLButtonElement, IButtonProps>(({
     size = "md",
-    type = "primary",
+    variant = "primary",
     color = "primary",
     leftIcon,
     rightIcon,
@@ -17,7 +17,7 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>(({
             styles.button,
             styles[size + "-size"],
             styles[color + "-color"],
-            styles[type + "-type"],
+            styles[variant + "-type"],
         ].join(" ")}
         {...rest}
     >

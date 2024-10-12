@@ -9,6 +9,7 @@ import Popover from "./Popover/Popover";
 import Stepper from "./Stepper/Stepper";
 import Loader from "./Loader/Loader";
 import Tabs from "./Tabs/Tabs";
+import Pagination from "./Pagination/Pagination";
 
 export {
     Button,
@@ -20,5 +21,6 @@ export {
     Popover,
     Stepper,
     Loader,
-    Tabs
+    Tabs,
+    Pagination
 }

@@ -8,5 +8,6 @@ export {
     Popover,
     Stepper,
     Loader,
-    Tabs
+    Tabs,
+    Pagination
 } from "./components";
