@@ -5,6 +5,7 @@ import Textarea from "./Textarea/Textarea";
 import CheckBox from "./CheckBox/CheckBox";
 import Modal from "./Modal/Modal";
 import Switch from "./Switch/Switch";
+import Popover from "./Popover/Popover";
 
 export {
     Button,
@@ -12,5 +13,6 @@ export {
     Textarea,
     CheckBox,
     Modal,
-    Switch
+    Switch,
+    Popover
 }
