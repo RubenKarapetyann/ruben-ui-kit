@@ -1,3 +1,5 @@
 import { HTMLAttributes } from "react";
 
-export type ITabProps = HTMLAttributes<HTMLButtonElement>
+export interface ITabProps extends HTMLAttributes<HTMLButtonElement> {
+    active?: boolean
+}

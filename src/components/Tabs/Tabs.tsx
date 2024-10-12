@@ -17,7 +17,8 @@ const Tabs = ({ children }: PropsWithChildren) => {
                 tabs.push(cloneElement(
                     typedChild, {
                         onClick: () => setIndex(tab),
-                        key: tab
+                        key: tab,
+                        active: index === tab
                     }))
             } else if (type === "content") {
                 contents.push(typedChild)
@@ -26,16 +27,19 @@ const Tabs = ({ children }: PropsWithChildren) => {
     })
 
     return (
-        <div className={styles.container}>
+        <>
             {tabs}
             {contents[index]}
-        </div>
+        </>
     )
 }
 
-const Tab = ({ children, ...rest }: ITabProps) => (
+const Tab = ({ children, active=false, ...rest }: ITabProps) => (
     <button
-        className={styles.tab}
+        className={[
+            styles.tab,
+            active && styles.active
+        ].join(" ")}
         {...rest}
     >{children}</button>
 )

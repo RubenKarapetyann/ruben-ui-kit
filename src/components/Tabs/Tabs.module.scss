@@ -1,0 +1,15 @@
+.tab {
+    background-color: var(--white);
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.content {
+    padding: 5px;
+}
+
+.active {
+    border-bottom: 1px solid var(--success);
+}
