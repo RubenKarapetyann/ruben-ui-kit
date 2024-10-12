@@ -8,6 +8,7 @@ import Switch from "./Switch/Switch";
 import Popover from "./Popover/Popover";
 import Stepper from "./Stepper/Stepper";
 import Loader from "./Loader/Loader";
+import Tabs from "./Tabs/Tabs";
 
 export {
     Button,
@@ -18,5 +19,6 @@ export {
     Switch,
     Popover,
     Stepper,
-    Loader
+    Loader,
+    Tabs
 }
