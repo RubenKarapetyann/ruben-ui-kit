@@ -1,13 +1,13 @@
 import styles from "./Table.module.scss"
 import { DivProps } from "./types"
 
-const Table = ({ children }: DivProps) => <div className={styles.table}>{children}</div>
+const Table = ({ children, ...rest }: DivProps) => <div {...rest} className={styles.table}>{children}</div>
 
-Table.Header = ({ children }: DivProps) => <div className={styles.header}>{children}</div>
-Table.HeaderItem = ({ children }: DivProps) => <div className={styles.headerItem}>{children}</div>
-Table.Row = ({ children }: DivProps) => <div className={styles.row}>{children}</div>
-Table.Item = ({ children }: DivProps) => <div className={styles.item}>{children}</div>
-Table.Body = ({ children }: DivProps) => <div>{children}</div>
-Table.Footer = ({ children }: DivProps) => <div className={styles.footer}>{children}</div>
+Table.Header = ({ children, ...rest }: DivProps) => <div {...rest} className={styles.header}>{children}</div>
+Table.HeaderItem = ({ children, ...rest }: DivProps) => <div {...rest} className={styles.headerItem}>{children}</div>
+Table.Row = ({ children, ...rest }: DivProps) => <div {...rest} className={styles.row}>{children}</div>
+Table.Item = ({ children, ...rest }: DivProps) => <div {...rest} className={styles.item}>{children}</div>
+Table.Body = ({ children, ...rest }: DivProps) => <div {...rest}>{children}</div>
+Table.Footer = ({ children, ...rest }: DivProps) => <div {...rest} className={styles.footer}>{children}</div>
 
 export default Table
