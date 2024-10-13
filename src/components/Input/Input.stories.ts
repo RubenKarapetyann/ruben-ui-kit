@@ -68,10 +68,18 @@ export const WithBothIcons: Story ={
     }
 }
 
-export const error: Story = {
+export const Error: Story = {
     name: "error",
     args: {
         value: "some text",
         error: "something went wrong"
     } 
+}
+
+export const Label: Story = {
+    name: "label",
+    args: {
+        value: "some text",
+        label: "Some Label"
+    }
 }

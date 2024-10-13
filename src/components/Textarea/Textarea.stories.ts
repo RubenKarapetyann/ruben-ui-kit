@@ -75,3 +75,11 @@ export const error: Story = {
         error: "something went wrong"
     } 
 }
+
+export const Label: Story = {
+    name: "label",
+    args: {
+        children: "some text",
+        label: "Some Label"
+    }
+}
