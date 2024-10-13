@@ -65,3 +65,35 @@ export const Small: Story = {
         size: "sm"
     }
 }
+
+export const Rounded: Story = {
+    name: "rounded",
+    args: {
+        children: "Click me",
+        form: "rounded"
+    }
+}
+
+export const Square: Story = {
+    name: "square",
+    args: {
+        children: "Click me",
+        form: "square"
+    }
+}
+
+export const Smooth: Story = {
+    name: "smooth",
+    args: {
+        children: "Click me",
+        form: "smooth"
+    }
+}
+
+export const Shadows: Story = {
+    name: "shadows",
+    args: {
+        children: "Click me",
+        shadows: true
+    }
+}
