@@ -1,86 +1,56 @@
 @use "../../styles/mixins";
-$borderRadius: 5px;
-$border: 0.5px solid black;
-
-.input {
-    border: $border;
-    border-radius: $borderRadius;
-    outline: none;
-    box-sizing: border-box;
-    padding: 6px;
-    height: auto;
-}
 
 .container {
+    display: flex;
     width: fit-content;
-    height: fit-content;
-    // @include mixins.flex();
-    display: table;
-    
+    border: 1px solid var(--secondary);
+    border-radius: 4px;
+    padding: 8px;
+    @include mixins.flex();
+    gap: 7px;
+    box-sizing: border-box;
 
-    span {
-        top: 0;
-        width: auto;
-        background: radial-gradient(circle, rgba(150,150,150,1) 17%, rgba(175,175,175,1) 64%);
+
+    .input {
+        outline: none;
+        border: none;
+        width: 100%;
+    }
+
+    &:focus-within {
+        border: 2px solid var(--primary);
+        padding: 7px;
+    }
+
+    .icon {
+        width: fit-content;
+        height: 100%;
         @include mixins.flex();
-        border: $border;
-        box-sizing: border-box;
-        padding: 0 5px;
-        color: white;
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
     }
 
-    .leftIconContainer {
-        border-top-left-radius: $borderRadius;
-        border-bottom-left-radius: $borderRadius;
-        border-right: none;
+    .input-sm {
+        font-size: 12px;
     }
     
-    .rightIconContainer {
-        border-top-right-radius: $borderRadius;
-        border-bottom-right-radius: $borderRadius;
-        border-left: none;
+    .input-md {
+        font-size: 16px;
     }
 
-    .leftIconInput {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        border-left: 0;
-    }
-
-    .rightIconInput {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-        border-right: 0;
+    .input-lg {
+        font-size: 20px
     }
 }
 
-// errors
 .error {
-    border-color: red;
-    color: red;
+    border: 1px solid var(--danger);
 }
 
 .errorMessage {
-    color: red;
+    color: var(--danger);
     font-size: 12px;
+    margin-top: 2px;
 }
 
-span.iconError {
-    border: red 0.5px solid;
-}
-
-// sizes
-.input-sm {
-    font-size: 14px;
-}
-
-.input-md {
+label {
     font-size: 16px;
-}
-
-.input-lg {
-    font-size: 20px;
 }

@@ -1,9 +1,6 @@
-import { DetailedHTMLProps, ReactNode, TextareaHTMLAttributes } from "react";
-import { Sizes } from "../../types";
+import { DetailedHTMLProps, TextareaHTMLAttributes } from "react";
+import { ITextFieldProps } from "../TextField/types";
 
-export interface ITextareaProps extends DetailedHTMLProps<TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement>{
-    error?: null | string,
-    leftIcon?: ReactNode,
-    rightIcon?: ReactNode,
-    inputSize?: Sizes
-}
+export type ITextareaProps =
+    DetailedHTMLProps<TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement>
+    & ITextFieldProps

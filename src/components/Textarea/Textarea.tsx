@@ -9,6 +9,7 @@ const Textarea = forwardRef<
     leftIcon,
     rightIcon,
     inputSize,
+    label,
     ...rest
 }: ITextareaProps, ref) => (
     <TextField
@@ -16,6 +17,7 @@ const Textarea = forwardRef<
         leftIcon={leftIcon}
         rightIcon={rightIcon}
         inputSize={inputSize}
+        label={label}
     ><textarea {...rest} ref={ref}/></TextField>
 ))
 

@@ -1,9 +1,6 @@
-import { DetailedHTMLProps, InputHTMLAttributes, ReactNode } from "react";
-import { Sizes } from "../../types";
+import { DetailedHTMLProps, InputHTMLAttributes } from "react";
+import { ITextFieldProps } from "../TextField/types";
 
-export interface IInputProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>{
-    error?: null | string,
-    leftIcon?: ReactNode,
-    rightIcon?: ReactNode,
-    inputSize?: Sizes
-}
+export type IInputProps =
+    DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
+    & ITextFieldProps

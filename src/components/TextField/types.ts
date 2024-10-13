@@ -5,5 +5,6 @@ export interface ITextFieldProps extends PropsWithChildren {
     error?: null | string,
     leftIcon?: ReactNode,
     rightIcon?: ReactNode,
-    inputSize?: Sizes
+    inputSize?: Sizes,
+    label?: string
 }

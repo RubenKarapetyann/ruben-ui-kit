@@ -9,6 +9,7 @@ const Input = forwardRef<
     leftIcon,
     rightIcon,
     inputSize = "md",
+    label,
     ...rest
 }: IInputProps, ref) => (
     <TextField
@@ -16,6 +17,7 @@ const Input = forwardRef<
         leftIcon={leftIcon}
         rightIcon={rightIcon}
         inputSize={inputSize}
+        label={label}
     ><input ref={ref} {...rest} /></TextField>
 ))
 
