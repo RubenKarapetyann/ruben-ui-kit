@@ -6,6 +6,9 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>(({
     size = "md",
     variant = "primary",
     color = "primary",
+    form = "smooth",
+    shadows = false,
+    className,
     leftIcon,
     rightIcon,
     children,
@@ -18,7 +21,9 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>(({
             styles[size + "-size"],
             styles[color + "-color"],
             styles[variant + "-type"],
-        ].join(" ")}
+            styles[form + "-form"],
+            shadows && styles.shadows
+        ].join(" ") + ` ${className}`}
         {...rest}
     >
         {leftIcon && <span>{leftIcon}</span>}

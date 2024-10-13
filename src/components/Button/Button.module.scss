@@ -1,7 +1,6 @@
 @use "../../styles/mixins.scss";
 
 .button {
-    border-radius: 5px;
     width: auto;
     height: auto;
     padding: 10px;
@@ -10,6 +9,15 @@
     box-sizing: border-box;
     @include mixins.flex();
     gap: 5px;
+}
+
+// shadows
+.shadows {
+    box-shadow: rgba(0, 0, 0, 0.10) 1.5px 1.5px 2px;
+
+    &:active {
+        box-shadow: inset rgba(0, 0, 0, 0.10) 1.5px 1.5px 2px;
+    }
 }
 
 // sizes
@@ -104,6 +112,19 @@ button.outlined-type {
     }
 }
 
+// forms
+.square-form {
+    border-radius: 2px;
+}
+
+.rounded-form {
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+.smooth-form {
+    border-radius: 5px;
+}
 
 // mixed
 .warning-color.primary-type {
