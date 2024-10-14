@@ -3,13 +3,28 @@
     cursor: pointer;
     border: none;
     font-size: 20px;
-    padding: 5px;
+    padding: 8px;
+    color: var(--secondary);
+    border-radius: 20px;
 }
 
 .content {
     padding: 5px;
+    color: var(--secondary);
+    font-size: 18px;
 }
 
 .active {
-    border-bottom: 1px solid var(--success);
+    background-color: var(--primary);
+    color: white;
+}
+
+.tabs {
+    width: fit-content;
+    border-radius: 25px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }

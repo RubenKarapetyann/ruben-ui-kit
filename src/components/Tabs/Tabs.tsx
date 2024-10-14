@@ -1,6 +1,6 @@
 import { Children, cloneElement, isValidElement, PropsWithChildren, ReactNode, useState } from "react"
 import styles from "./Tabs.module.scss"
-import { ITabProps } from "./types"
+import { IContentProps, ITabProps } from "./types"
 
 const Tabs = ({ children }: PropsWithChildren) => {
     const [index, setIndex] = useState(0)
@@ -27,19 +27,21 @@ const Tabs = ({ children }: PropsWithChildren) => {
     })
 
     return (
-        <>
-            {tabs}
+        <div className={styles.container}>
+            <div className={styles.tabs}>
+                {tabs}
+            </div>
             {contents[index]}
-        </>
+        </div>
     )
 }
 
-const Tab = ({ children, active=false, ...rest }: ITabProps) => (
+const Tab = ({ children, active=false, className, ...rest }: ITabProps) => (
     <button
         className={[
             styles.tab,
             active && styles.active
-        ].join(" ")}
+        ].join(" ") + ` ${className}`}
         {...rest}
     >{children}</button>
 )
@@ -47,8 +49,8 @@ Tab.displayCode = "tab"
 Tabs.Tab = Tab
 
 
-const Content = ({ children }: PropsWithChildren) => (
-    <div className={styles.content}>{children}</div>
+const Content = ({ children, className }: IContentProps) => (
+    <div className={styles.content + ` ${className}`}>{children}</div>
 )
 Content.displayCode = "content"
 Tabs.Content = Content
