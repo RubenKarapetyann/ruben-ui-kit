@@ -18,13 +18,24 @@
 .header {
     font-size: 20px;
     font-weight: bold;
-    border-top: 1px solid var(--secondary);
-    border-bottom: 2px solid var(--secondary);
+    background-color: var(--secondary-stronger);
+    color: var(--white);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .row {
-    border-bottom: 0.3px solid var(--secondary);
     font-size: 18px;
+    color: var(--secondary);
+    cursor: pointer;
+
+    &:hover {
+        color: var(--black);
+    }
+
+    &:nth-child(even) {
+        background-color: rgb(248, 248, 248);
+    }
 }
 
 .headerItem, .item {
@@ -35,5 +46,7 @@
 
 .footer {
     @include mixins.flex();
-    padding: 5px;
+    padding: 8px;
+    color: var(--secondary);
+    border-top: 1px solid var(--secondary);
 }

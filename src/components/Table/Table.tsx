@@ -7,7 +7,7 @@ Table.Header = ({ children, ...rest }: DivProps) => <div {...rest} className={st
 Table.HeaderItem = ({ children, ...rest }: DivProps) => <div {...rest} className={styles.headerItem}>{children}</div>
 Table.Row = ({ children, ...rest }: DivProps) => <div {...rest} className={styles.row}>{children}</div>
 Table.Item = ({ children, ...rest }: DivProps) => <div {...rest} className={styles.item}>{children}</div>
-Table.Body = ({ children, ...rest }: DivProps) => <div {...rest}>{children}</div>
+Table.Body = ({ children, ...rest }: DivProps) => <div {...rest} className={styles.body}>{children}</div>
 Table.Footer = ({ children, ...rest }: DivProps) => <div {...rest} className={styles.footer}>{children}</div>
 
 export default Table
