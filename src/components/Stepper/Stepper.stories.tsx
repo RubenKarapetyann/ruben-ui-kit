@@ -45,3 +45,16 @@ export const Reject: Story = {
         children: <Stepper.Step status="reject">1</Stepper.Step>
     }
 }
+
+export const Label: Story = {
+    name: "label",
+    args: {
+        children: (
+            <>
+                <Stepper.Step status="progress" label="some label 1">1</Stepper.Step>
+                <Stepper.Step status="success" label="some label 2">2</Stepper.Step>
+                <Stepper.Step status="reject" label="some label 3">3</Stepper.Step>
+            </>
+        )
+    }
+}
