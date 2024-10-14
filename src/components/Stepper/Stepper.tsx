@@ -11,11 +11,14 @@ const Stepper = ({
 )
 
 
-Stepper.Step = ({ children, status="progress", ...rest }: IStepProps) => (
-    <div 
-        className={[styles.step, styles[status]].join(" ")}
-        {...rest}
-    >{children}</div>
+Stepper.Step = ({ children, status="progress", label, ...rest }: IStepProps) => (
+    <div className={[styles.stepContainer, styles[status]].join(" ")}>
+        <div 
+            className={styles.step}
+            {...rest}
+        >{children}</div>
+        {label && <span className={styles.label}>{label}</span>}
+    </div>
 )
 
 export default Stepper

@@ -2,31 +2,65 @@
 
 .container {
     @include mixins.flex();
-    gap: 50px;
+    gap: 10px;
     width: fit-content;
-    color: var(--white);
 }
 
 .step {
-    min-width: 30px;
-    min-height: 30px;
+    min-width: 20px;
+    min-height: 20px;
     padding: 5px;
     width: fit-content;
     aspect-ratio: 1;
     border-radius: 50%;
     @include mixins.flex();
-    cursor: pointer;
+    color: var(--white)
 }
 
+.stepContainer {
+    @include mixins.flex();
+    color: var(--secondary);
+    gap: 5px;
+
+    .label {
+        max-width: 100px;
+        flex-wrap: wrap;
+    }
+
+    &:not(:last-child)::after {
+        content: "";
+        height: 1px;
+        width: 50px;
+        background-color: var(--secondary);
+    }
+}
 
 .progress {
-    background-color: var(--secondary);
+    .label {
+        color: var(--seconadry);
+    }
+
+    .step {
+        background-color: var(--secondary);
+    }
 }
 
 .success {
-    background-color: var(--success);
+    .label {
+        color: var(--success);
+    }
+
+    .step {
+        background-color: var(--success);
+    }
 }
 
 .reject {
-    background-color: var(--danger);
+    .label {
+        color: var(--danger);
+    }
+    
+    .step {
+        background-color: var(--danger);
+    }
 }
