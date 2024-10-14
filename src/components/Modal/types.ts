@@ -1,4 +1,5 @@
 import { PropsWithChildren } from "react";
+import { IButtonProps } from "../Button/types";
 
 export interface IModalProps extends PropsWithChildren {
     onClose?: () => void,
@@ -6,6 +7,6 @@ export interface IModalProps extends PropsWithChildren {
     closeIfClickedOutside?: boolean,
 }
 
-export interface ICloseButtonProps extends PropsWithChildren {
+export interface ICloseButtonProps extends IButtonProps {
     onClose?: () => void
 }

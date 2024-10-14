@@ -2,6 +2,7 @@ import { cloneElement, PropsWithChildren } from "react"
 import styles from "./Modal.module.scss"
 import { ICloseButtonProps, IModalProps } from "./types"
 import runThroughAllChildren from "../../utils/runThroughAllChildren"
+import Button from "../Button/Button"
 
 
 const Modal = ({
@@ -40,12 +41,13 @@ const Modal = ({
     })
         
     return (
-        <div className={styles.background} onClick={onCloseOutside}>
-            {/* stops bubling */}
-            <div className={styles.container} onClick={e => e.stopPropagation()}>
+        <>
+            <div className={styles.container}>
                 {newChildren}
             </div>
-        </div>
+            <div className={styles.background} onClick={onCloseOutside}>
+            </div>
+        </>
     )
 }
 
@@ -61,11 +63,14 @@ Modal.Footer = ({ children }: PropsWithChildren) => (
     <div className={styles.footer}>{children}</div>
 )
 
-const CloseButton = ({ children, onClose }: ICloseButtonProps) => (
-    <button
-        className={styles.button}
+const CloseButton = ({ children, onClose, ...rest }: ICloseButtonProps) => (
+    <Button
+        variant="outlined"
+        color="secondary"
+        form="rounded"
         onClick={onClose}
-    >{children || "x"}</button>
+        {...rest}
+    >{children || "x"}</Button>
 )
 CloseButton.displayCode = "closeButton"
 Modal.CloseButton = CloseButton
