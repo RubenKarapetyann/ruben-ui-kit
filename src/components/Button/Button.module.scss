@@ -1,8 +1,6 @@
 @use "../../styles/mixins.scss";
 
 .button {
-    width: auto;
-    height: auto;
     padding: 10px;
     border: none;
     cursor: pointer;
@@ -119,7 +117,6 @@ button.outlined-type {
 
 .rounded-form {
     border-radius: 50%;
-    aspect-ratio: 1;
 }
 
 .smooth-form {
@@ -137,4 +134,19 @@ button.outlined-type {
 
 .warning-color.outlined-type:hover {
     color: var(--black);
+}
+
+.sm-size.rounded-form {
+    width: 25px;
+    height: 25px;
+}
+
+.md-size.rounded-form {
+    width: 30px;
+    height: 30px;
+}
+
+.lg-size.rounded-form {
+    width: 40px;
+    height: 40px;
 }
