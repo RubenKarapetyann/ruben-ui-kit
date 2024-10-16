@@ -1,32 +1,73 @@
+@use "../../styles/mixins";
+
 .checkbox {
     position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--gray);
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--secondary);
+    }
+
+    &::after {
+        content: "";
+        background: url('../../assets/icon.svg') 50% 50% no-repeat;
+        background-size: 100%;
+        background-color: var(--success);
+        border-radius: 5px;
+        display: none
+    }
+     
+
+    &:checked:after {
+        display: inline-block
+    }
 }
 
 .checkbox-sm {
-    width: 12px;
-    height: 12px;
+    @include mixins.square(15px);
+
+    &::after {
+        @include mixins.square(15px);
+    }
 }
 
 .checkbox-md {
-    width: 15px;
-    height: 15px;
+    @include mixins.square(18px);
+
+    &::after {
+        @include mixins.square(18px);
+    }
 }
 
 .checkbox-lg {
-    width: 18px;
-    height: 18px;
+    @include mixins.square(20px);
+
+    &::after {
+        @include mixins.square(20px);
+    }
 }
 
-.error::after {
-    content: "";
-    width: 100%;
-    height: 100%;   
-    position: absolute;
-    border-radius: 2px;
-    border: 0.6px solid red;
-    box-sizing: border-box;
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 3px;
 }
 
-.error:disabled::after {
-    border-color: rgb(255, 67, 67);
-}
+// .error::after {
+//     content: "";
+//     width: 100%;
+//     height: 100%;   
+//     position: absolute;
+//     border-radius: 2px;
+//     border: 0.6px solid red;
+//     box-sizing: border-box;
+// }
+
+// .error:disabled::after {
+//     border-color: rgb(255, 67, 67);
+// }

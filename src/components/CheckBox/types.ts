@@ -3,5 +3,6 @@ import { Sizes } from "../../types";
 
 export interface ICheckBoxProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>{
     checkBoxSize?: Sizes,
-    error?: boolean
+    error?: boolean,
+    label?: string
 }
