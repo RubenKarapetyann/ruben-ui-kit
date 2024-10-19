@@ -15,21 +15,15 @@ const Popover = ({
 
     const newChildren = runThroughAllChildren({
         children, handle: child => {
-            const anyChild = child as any
-            if (typeof anyChild.type === "string") {
-                return anyChild
-            }
+            const type = child.type.displayCode
 
-            const type = anyChild.type.displayCode as string
-            switch (type) {
-                case "popoverButton":
-                    return cloneElement(
-                        anyChild,
-                        { onToggle }
-                    )
-                default:
-                    return anyChild
+            if (type === "popoverButton") {
+                return cloneElement(
+                    child,
+                    { onToggle }
+                )
             }
+            return child
         }
     })
 

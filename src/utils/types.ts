@@ -1,5 +1,11 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, ReactElement } from "react";
+
+type ReactCodedElement = ReactElement & {
+    type: {
+        displayCode?: string
+    }
+}
 
 export interface RunThroughAllChildrenProps extends PropsWithChildren {
-    handle: (child: React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<unknown>>) => React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<unknown>>
+    handle: (child: ReactCodedElement) => ReactCodedElement
 }

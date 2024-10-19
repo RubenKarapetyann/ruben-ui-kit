@@ -23,20 +23,15 @@ const Modal = ({
 
     const newChildren = runThroughAllChildren({
         children, handle: child => {
-            // ????????????????????????????????? 
-            const anyChild = child as any
-            if (typeof anyChild.type === "string") {
-                return anyChild
-            }
+            const type = child.type.displayCode
 
-            const type: string = anyChild.type.displayCode as string
             if (type === "closeButton") {
                 return cloneElement(
-                    anyChild,
+                    child,
                     { onClose }
                 )
             }
-            return anyChild
+            return child
         }
     })
         
