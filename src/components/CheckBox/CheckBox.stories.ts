@@ -37,6 +37,14 @@ export const Small: Story = {
     }
 }
 
+export const Label: Story = {
+    name: "label",
+    args: {
+        label: "Some Label"
+    }
+}
+
+
 export const Error: Story = {
     name: "error",
     args: {
