@@ -11,6 +11,7 @@ import Loader from "./Loader/Loader";
 import Tabs from "./Tabs/Tabs";
 import Pagination from "./Pagination/Pagination";
 import Table from "./Table/Table";
+import Select from "./Select/Select";
 
 export {
     Button,
@@ -24,5 +25,6 @@ export {
     Loader,
     Tabs,
     Pagination,
-    Table
+    Table,
+    Select
 }

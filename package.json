@@ -55,5 +55,8 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "dependencies": {
+    "react-select": "^5.8.1"
   }
 }

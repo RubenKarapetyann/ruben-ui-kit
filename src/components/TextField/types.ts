@@ -1,4 +1,4 @@
-import { PropsWithChildren, ReactNode } from "react";
+import { CSSProperties, PropsWithChildren, ReactNode } from "react";
 import { Sizes } from "../../types";
 
 export interface ITextFieldProps extends PropsWithChildren {
@@ -6,5 +6,6 @@ export interface ITextFieldProps extends PropsWithChildren {
     leftIcon?: ReactNode,
     rightIcon?: ReactNode,
     inputSize?: Sizes,
-    label?: string
+    label?: string,
+    style?: CSSProperties
 }

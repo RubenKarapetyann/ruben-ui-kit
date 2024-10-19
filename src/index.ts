@@ -10,5 +10,6 @@ export {
     Loader,
     Tabs,
     Pagination,
-    Table
+    Table,
+    Select
 } from "./components";

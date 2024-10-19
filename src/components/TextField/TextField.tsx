@@ -8,7 +8,8 @@ const TextField = ({
     rightIcon,
     error,
     label,
-    inputSize = "md"
+    inputSize = "md",
+    style
 }: ITextFieldProps) => {
     const inputId = useId()
     const input = Children.only(children)
@@ -28,7 +29,8 @@ const TextField = ({
                         leftIcon && styles.leftIconInput,
                         rightIcon && styles.rightIconInput
                     ].join(" "),
-                    id: inputId
+                    id: inputId,
+                    style
                 })}
                 {rightIcon && <span className={[styles.icon, styles.rightIconContainer, error && styles.iconError].join(" ")}>{rightIcon}</span>}
             </div>
