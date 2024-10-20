@@ -38,7 +38,7 @@ export const StyledButon: Story = {
     args: {
         isOpen: true,
         children: [
-            <Popover.Button type="outlined" color="warning">popover</Popover.Button>,
+            <Popover.Button variant="outlined" color="warning">popover</Popover.Button>,
             <Popover.Content>some content</Popover.Content>
         ]
     }

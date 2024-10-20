@@ -1,13 +1,14 @@
 {
   "name": "ruben-ui-kit",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "files": [
     "dist"
   ],
   "main": "./dist/ruben-ui-kit.umd.js",
   "module": "./dist/ruben-ui-kit.es.js",
+  "style" : "./dist/style.css",
   "exports": {
     "./package.json": "./package.json",
     ".": {
