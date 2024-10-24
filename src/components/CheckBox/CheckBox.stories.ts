@@ -55,7 +55,8 @@ export const Error: Story = {
 export const Disabled: Story = {
     name: "disabled",
     args: {
-        disabled: true
+        disabled: true,
+        checked: false
     }
 }
 
@@ -63,6 +64,15 @@ export const DisabledWithError: Story = {
     name: "disabled error",
     args: {
         disabled: true,
-        error: true
+        error: true,
+        checked: false
+    }
+}
+
+export const CheckedDisabled: Story = {
+    name: "checked disabled",
+    args: {
+        disabled: true,
+        checked: true
     }
 }

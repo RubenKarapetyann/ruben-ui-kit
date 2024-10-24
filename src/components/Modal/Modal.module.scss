@@ -28,16 +28,21 @@
     height: auto;
     @include mixins.flex();
     justify-content: start;
-    border-bottom: 2px var(--black) solid;
+    border-bottom: 2px var(--secondary-stronger) solid;
     padding-bottom: 10px;
+    color: var(--secondary-stronger);
+    font-weight: bold;
 }
 
 .footer{
-    border-top: 2px var(--black) solid;
+    border-top: 2px var(--secondary-stronger) solid;
     padding-top: 10px;
+    color: var(--secondary-stronger);
+    font-weight: bold;
 }
 
 .content {
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 14px;
 }

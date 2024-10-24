@@ -116,3 +116,12 @@ export const Secondary: Story = {
         variant: "secondary"
     }
 }
+
+export const MoreControls: Story = {
+    name: "more controls",
+    args: {
+        count: 10,
+        page: 5,
+        moreControls: true
+    }
+}

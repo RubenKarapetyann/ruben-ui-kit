@@ -1,6 +1,2 @@
-import type { Colors, Sizes } from "./styles";
-
-export {
-    Colors,
-    Sizes
-}
+export type * from "./styles";
+export type * from "./props"

@@ -14,7 +14,7 @@
 
     &::after {
         content: "";
-        background: url('../../assets/icon.svg') 50% 50% no-repeat;
+        background: url('../../assets/checkbox.svg') 0.2% 0.2% no-repeat;
         background-size: 100%;
         background-color: var(--success);
         border-radius: 5px;
@@ -23,8 +23,13 @@
      
 
     &:checked:after {
-        display: inline-block
+        @include mixins.flex();
     }
+}
+
+.checkbox:disabled {
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .checkbox-sm {
@@ -60,4 +65,8 @@
 
 .error {
     background-color: var(--danger);
+
+    &:hover {
+        background-color: var(--danger-strong);
+    }
 }

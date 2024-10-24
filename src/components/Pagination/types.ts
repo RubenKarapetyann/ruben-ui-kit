@@ -10,6 +10,10 @@ export interface IPaginationProps {
     form?: ButtonForms,
     variant?: "outlined" | "secondary",
     size?: Sizes,
-    color?: Colors
+    color?: Colors,
+    moreControls?: boolean
 }
 
+export interface IIconProps {
+    left?: boolean
+}

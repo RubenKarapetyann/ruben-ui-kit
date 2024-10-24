@@ -1,10 +1,5 @@
-import { PropsWithChildren, ReactElement } from "react";
-
-type ReactCodedElement = ReactElement & {
-    type: {
-        displayCode?: string
-    }
-}
+import { PropsWithChildren } from "react";
+import { ReactCodedElement } from "../types";
 
 export interface RunThroughAllChildrenProps extends PropsWithChildren {
     handle: (child: ReactCodedElement) => ReactCodedElement

@@ -69,7 +69,7 @@ export const Small: Story = {
 export const Rounded: Story = {
     name: "rounded",
     args: {
-        children: "Click me",
+        children: "1",
         form: "rounded"
     }
 }
@@ -95,5 +95,30 @@ export const Shadows: Story = {
     args: {
         children: "Click me",
         shadows: true
+    }
+}
+
+export const LeftIcon: Story = {
+    name: "left icon",
+    args: {
+        children: "Click me",
+        leftIcon: "icon"
+    }
+}
+
+export const RightIcon: Story = {
+    name: "right icon",
+    args: {
+        children: "Click me",
+        rightIcon: "icon"
+    }
+}
+
+export const Icons: Story = {
+    name: "icons",
+    args: {
+        children: "Click me",
+        leftIcon: "icon",
+        rightIcon: "icon"
     }
 }
